@@ -1,0 +1,105 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Default (dark) theme tokens. The ThemeProvider always applies a
+     .theme-light / .theme-dark class on <html>, so these values only
+     apply for the brief moment before the inline theme script runs. */
+  --bg-gradient-start: #121212;
+  --bg-gradient-end: #333333;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  /* Text drawn on the always-light connection cards, so dark in both themes. */
+  --text-contrast-light: #2a2a2a;
+  --text-contrast-medium: #4a4a4a;
+  --surface: #1f1f1f;
+  --border: rgba(255, 255, 255, 0.14);
+  /* Crisp outline that reads as the inverse of the background. */
+  --outline: rgba(255, 255, 255, 0.55);
+
+  color-scheme: dark;
+  color: var(--text-primary);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+.theme-dark {
+  --bg-gradient-start: #121212;
+  --bg-gradient-end: #333333;
+  --text-primary: #ffffff;
+  --text-secondary: rgba(255, 255, 255, 0.8);
+  --text-contrast-light: #2a2a2a;
+  --text-contrast-medium: #4a4a4a;
+  --surface: #1f1f1f;
+  --border: rgba(255, 255, 255, 0.14);
+  --outline: rgba(255, 255, 255, 0.55);
+}
+
+.theme-light {
+  --bg-gradient-start: #f8f9fa;
+  --bg-gradient-end: #ffffff;
+  --text-primary: #2a2a2a;
+  --text-secondary: rgba(42, 42, 42, 0.8);
+  --text-contrast-light: #2a2a2a;
+  --text-contrast-medium: #4a4a4a;
+  --surface: #ffffff;
+  --border: rgba(0, 0, 0, 0.12);
+  --outline: rgba(0, 0, 0, 0.55);
+}
+
+a {
+  font-weight: 500;
+  color: inherit;
+  text-decoration: inherit;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  /* Solid base with a fixed-height gradient band pinned to the bottom of the
+     document. `scroll` attachment (the default) anchors it to the body box, so
+     the band always sits at the very bottom of the page regardless of length,
+     rather than following the viewport. */
+  background-color: var(--bg-gradient-start);
+  background-image: linear-gradient(
+    180deg,
+    var(--bg-gradient-start) 0%,
+    var(--bg-gradient-end) 100%
+  );
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: 100% 320px;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: var(--surface);
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: currentColor;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}

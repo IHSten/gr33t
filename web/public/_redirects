@@ -1,0 +1,16 @@
+# SPA client-side routing fallback.
+#
+# NOTE: this also returns index.html (200) for a *missing* /assets/* hash —
+# Cloudflare Pages _redirects cannot emit 404, and a self-rewrite exclusion
+# (/assets/* /assets/:splat 200) was tested with `wrangler pages dev` and does
+# NOT stop the fallthrough. That's why /assets/* is cached with a finite,
+# self-healing max-age (see _headers) rather than `immutable`: a masquerading
+# fallback must be able to expire. Stale code-split chunks after a deploy are
+# handled in-session by ChunkErrorBoundary (a one-time reload).
+
+# RFC 9116 mandates the canonical path /.well-known/security.txt; keep the
+# legacy /security.txt discoverable by pointing it there. Must precede the
+# catch-all below, which would otherwise swallow it into the SPA shell.
+/security.txt    /.well-known/security.txt    301
+
+/*    /index.html    200

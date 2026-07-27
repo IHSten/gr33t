@@ -1,0 +1,40 @@
+name = "gr33t"
+main = "src/index.ts"
+compatibility_date = "2024-12-01"
+compatibility_flags = ["nodejs_compat"]
+
+[[d1_databases]]
+binding = "DB"
+database_name = "gr33t"
+database_id = "PLACEHOLDER-D1-DATABASE-ID"
+migrations_dir = "migrations"
+
+[[r2_buckets]]
+binding = "IMAGES"
+bucket_name = "gr33t-images"
+
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "PLACEHOLDER-KV-NAMESPACE-ID"
+
+# Read-through cache for the public card read (GET /api/card/:id); invalidated
+# per-key on owner edits. Kept separate from SESSIONS by design.
+[[kv_namespaces]]
+binding = "CARD_CACHE"
+id = "PLACEHOLDER-CARD-CACHE-KV-ID"
+
+# Workers Analytics Engine: append-only, columnar (ClickHouse under the hood),
+# ~90-day retention. First analytics sink; see worker/src/analytics.
+[[analytics_engine_datasets]]
+binding = "EVENTS"
+dataset = "gr33t_events"
+
+[[routes]]
+pattern   = "gr33t.me/api/*"
+zone_name = "gr33t.me"
+
+[vars]
+# AUTH_MODE = "google"
+# GOOGLE_REDIRECT_URI = "https://gr33t.me/api/auth/google/callback"
+# POST_LOGIN_REDIRECT = "/"
+# PUBLIC_IMAGE_BASE_URL = "https://images.gr33t.me"

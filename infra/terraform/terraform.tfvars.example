@@ -1,0 +1,15 @@
+cloudflare_account_id = "<your-cloudflare-account-id>"
+
+# project_name                  = "gr33t"
+# d1_database_name              = "gr33t"
+# r2_bucket_name                = "gr33t-images"
+# kv_namespace_title            = "gr33t-sessions"
+# card_cache_kv_namespace_title = "gr33t-card-cache"
+# analytics_engine_dataset_name = "gr33t_events"
+# r2_location                   = "wnam"
+# production_branch             = "main"
+
+cloudflare_zone_id = "<zone id for gr33t.me>"
+# domain        = "gr33t.me"
+# manage_domain = false
+# manage_dns    = false

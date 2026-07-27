@@ -1,0 +1,9 @@
+# gr33t security contact — https://securitytxt.org (RFC 9116)
+#
+# Found a vulnerability? Please email us before disclosing publicly.
+# We aim to acknowledge reports within a few days.
+
+Contact: mailto:security@gr33t.me
+Expires: 2027-07-26T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://gr33t.me/.well-known/security.txt

@@ -1,0 +1,23 @@
+# Security headers for Pages-served responses (the SPA shell + assets).
+# Cloudflare Pages applies these; the Worker (gr33t.me/api/*) sets its own.
+#
+# CSP notes:
+# - script-src 'self': all app JS is same-origin (/assets/*, /theme-init.js);
+#   Cloudflare's own /cdn-cgi/ challenge script is same-origin too.
+# - style-src 'unsafe-inline': React inline styles + qr-code-styling inject
+#   styles at runtime. Safe to keep; tighten later if those are removed.
+# - img-src https:: connection/avatar images are arbitrary user-supplied URLs.
+/*
+  Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; font-src 'self'; connect-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'; form-action 'self'; upgrade-insecure-requests
+  Strict-Transport-Security: max-age=63072000; includeSubDomains
+  X-Frame-Options: DENY
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), camera=(), microphone=()
+
+# Content-hashed build assets. Cached for a day for repeat visits, but NOT
+# `immutable`: the SPA fallback returns index.html (200) for a missing hash
+# (Pages can't 404 in _redirects — verified), so any masquerade must be able to
+# expire and self-heal rather than stick forever. Etags give cheap 304s after.
+/assets/*
+  Cache-Control: public, max-age=86400

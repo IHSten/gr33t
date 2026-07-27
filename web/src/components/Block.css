@@ -1,0 +1,603 @@
+.block {
+  display: flex;
+  align-items: center;
+  padding: 16px 16px;
+  margin: 4px 0;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  min-height: 76px;
+}
+
+.block:hover {
+  background: rgba(255, 255, 255, 1);
+  border-color: rgba(59, 130, 246, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.block-icon {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #e2e8f0;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #475569;
+  flex-shrink: 0;
+}
+
+.block-icon img {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.block-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.block-type {
+  font-weight: 600;
+  color: var(--text-contrast-light);
+  font-size: 16px;
+  margin-bottom: 3px;
+}
+
+.block-handle {
+  color: var(--text-contrast-medium);
+  font-size: 14px;
+  word-break: break-word;
+}
+
+@media (min-width: 768px) {
+  .block {
+    padding: 18px 22px;
+    margin: 4px;
+    border-radius: 16px;
+    min-height: 82px;
+  }
+
+  .block-icon {
+    width: 52px;
+    height: 52px;
+    margin-right: 18px;
+  }
+
+  .block-icon img {
+    width: 34px;
+    height: 34px;
+  }
+
+  .block-type {
+    font-size: 17px;
+    margin-bottom: 4px;
+  }
+
+  .block-handle {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .block {
+    padding: 20px 24px;
+    margin: 6px;
+    min-height: 88px;
+  }
+
+  .block-icon {
+    width: 56px;
+    height: 56px;
+    margin-right: 20px;
+  }
+
+  .block-icon img {
+    width: 36px;
+    height: 36px;
+  }
+
+  .block-type {
+    font-size: 18px;
+    margin-bottom: 6px;
+  }
+
+  .block-handle {
+    font-size: 16px;
+  }
+}
+
+.block-x {
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+  border-color: #333333;
+}
+
+.block-x:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #333333 100%);
+  border-color: #555555;
+}
+
+.block-linkedin {
+  background: linear-gradient(135deg, #0077b5 0%, #005885 100%);
+  border-color: #004471;
+}
+
+.block-linkedin:hover {
+  background: linear-gradient(135deg, #005885 0%, #004471 100%);
+  border-color: #003556;
+}
+
+.block-instagram {
+  background: linear-gradient(135deg, #e4405f 0%, #833ab4 50%, #fd1d1d 100%);
+  border-color: #c13584;
+}
+
+.block-instagram:hover {
+  background: linear-gradient(135deg, #c13584 0%, #6a2c93 50%, #d61a1a 100%);
+  border-color: #a02e5a;
+}
+
+.block-facebook {
+  background: linear-gradient(135deg, #1877f2 0%, #42a5f5 100%);
+  border-color: #1565c0;
+}
+
+.block-facebook:hover {
+  background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+  border-color: #0d47a1;
+}
+
+.block-tiktok {
+  background: linear-gradient(135deg, #000000 0%, #ff0050 50%, #000000 100%);
+  border-color: #cc003d;
+}
+
+.block-tiktok:hover {
+  background: linear-gradient(135deg, #1a1a1a 0%, #cc003d 50%, #1a1a1a 100%);
+  border-color: #990029;
+}
+
+.block-youtube {
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  border-color: #b30000;
+}
+
+.block-youtube:hover {
+  background: linear-gradient(135deg, #cc0000 0%, #990000 100%);
+  border-color: #800000;
+}
+
+.block-twitch {
+  background: linear-gradient(135deg, #9146ff 0%, #772ce8 100%);
+  border-color: #6441a4;
+}
+
+.block-twitch:hover {
+  background: linear-gradient(135deg, #772ce8 0%, #5b1fb3 100%);
+  border-color: #4b1a8c;
+}
+
+.block-discord {
+  background: linear-gradient(135deg, #5865f2 0%, #4752c4 100%);
+  border-color: #3c45a5;
+}
+
+.block-discord:hover {
+  background: linear-gradient(135deg, #4752c4 0%, #3c45a5 100%);
+  border-color: #303986;
+}
+
+.block-reddit {
+  background: linear-gradient(135deg, #ff4500 0%, #cc3700 100%);
+  border-color: #b32f00;
+}
+
+.block-reddit:hover {
+  background: linear-gradient(135deg, #cc3700 0%, #992900 100%);
+  border-color: #801f00;
+}
+
+.block-pinterest {
+  background: linear-gradient(135deg, #bd081c 0%, #8c0615 100%);
+  border-color: #7a0512;
+}
+
+.block-pinterest:hover {
+  background: linear-gradient(135deg, #8c0615 0%, #5e040e 100%);
+  border-color: #4a030b;
+}
+
+.block-snapchat {
+  background: linear-gradient(135deg, #fffc00 0%, #ccca00 100%);
+  border-color: #b3b300;
+  color: #000000;
+}
+
+.block-snapchat:hover {
+  background: linear-gradient(135deg, #ccca00 0%, #999700 100%);
+  border-color: #808000;
+  color: #000000;
+}
+
+.block-whatsapp {
+  background: linear-gradient(135deg, #25d366 0%, #1da851 100%);
+  border-color: #128c7e;
+}
+
+.block-whatsapp:hover {
+  background: linear-gradient(135deg, #1da851 0%, #128c7e 100%);
+  border-color: #0f7a6b;
+}
+
+.block-patreon {
+  background: linear-gradient(135deg, #f96854 0%, #e6522c 100%);
+  border-color: #d4441f;
+}
+
+.block-patreon:hover {
+  background: linear-gradient(135deg, #e6522c 0%, #d4441f 100%);
+  border-color: #c23616;
+}
+
+.block-phone {
+  background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+  border-color: #2e7d32;
+}
+
+.block-phone:hover {
+  background: linear-gradient(135deg, #388e3c 0%, #2e7d32 100%);
+  border-color: #1b5e20;
+}
+
+.block-email {
+  background: linear-gradient(135deg, #ea4335 0%, #d33b2c 100%);
+  border-color: #c5221f;
+}
+
+.block-email:hover {
+  background: linear-gradient(135deg, #d33b2c 0%, #c5221f 100%);
+  border-color: #b52d20;
+}
+
+.block-website {
+  background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+  border-color: #37474f;
+}
+
+.block-website:hover {
+  background: linear-gradient(135deg, #455a64 0%, #37474f 100%);
+  border-color: #263238;
+}
+
+/* Dev-tool connections */
+.block-github {
+  background: linear-gradient(135deg, #24292e 0%, #0d1117 100%);
+  border-color: #0d1117;
+}
+.block-github:hover {
+  background: linear-gradient(135deg, #0d1117 0%, #010409 100%);
+  border-color: #000000;
+}
+
+.block-gitlab {
+  background: linear-gradient(135deg, #fc6d26 0%, #e24329 100%);
+  border-color: #c9391a;
+}
+.block-gitlab:hover {
+  background: linear-gradient(135deg, #e24329 0%, #c9391a 100%);
+  border-color: #a82f14;
+}
+
+.block-stackoverflow {
+  background: linear-gradient(135deg, #f48024 0%, #d8670c 100%);
+  border-color: #c25e0a;
+}
+.block-stackoverflow:hover {
+  background: linear-gradient(135deg, #d8670c 0%, #b45409 100%);
+  border-color: #9c4908;
+}
+
+.block-devto {
+  background: linear-gradient(135deg, #171717 0%, #0a0a0a 100%);
+  border-color: #000000;
+}
+.block-devto:hover {
+  background: linear-gradient(135deg, #262626 0%, #171717 100%);
+  border-color: #000000;
+}
+
+.block-medium {
+  background: linear-gradient(135deg, #171717 0%, #000000 100%);
+  border-color: #000000;
+}
+.block-medium:hover {
+  background: linear-gradient(135deg, #262626 0%, #171717 100%);
+  border-color: #000000;
+}
+
+.block-codepen {
+  background: linear-gradient(135deg, #1e1f26 0%, #0b0b0d 100%);
+  border-color: #000000;
+}
+.block-codepen:hover {
+  background: linear-gradient(135deg, #2b2c36 0%, #1e1f26 100%);
+  border-color: #000000;
+}
+
+.block-npm {
+  background: linear-gradient(135deg, #cb3837 0%, #a52322 100%);
+  border-color: #8f1e1d;
+}
+.block-npm:hover {
+  background: linear-gradient(135deg, #a52322 0%, #841817 100%);
+  border-color: #6f1413;
+}
+
+.block-bluesky {
+  background: linear-gradient(135deg, #0085ff 0%, #0066cc 100%);
+  border-color: #005bb3;
+}
+.block-bluesky:hover {
+  background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+  border-color: #004a91;
+}
+
+.block-mastodon {
+  background: linear-gradient(135deg, #6364ff 0%, #563acd 100%);
+  border-color: #4a30b8;
+}
+.block-mastodon:hover {
+  background: linear-gradient(135deg, #563acd 0%, #472ba8 100%);
+  border-color: #3b238c;
+}
+
+.block-github,
+.block-gitlab,
+.block-stackoverflow,
+.block-devto,
+.block-medium,
+.block-codepen,
+.block-npm,
+.block-bluesky,
+.block-mastodon {
+  color: white;
+}
+
+.block-github .block-type,
+.block-gitlab .block-type,
+.block-stackoverflow .block-type,
+.block-devto .block-type,
+.block-medium .block-type,
+.block-codepen .block-type,
+.block-npm .block-type,
+.block-bluesky .block-type,
+.block-mastodon .block-type {
+  color: white;
+}
+
+.block-github .block-handle,
+.block-gitlab .block-handle,
+.block-stackoverflow .block-handle,
+.block-devto .block-handle,
+.block-medium .block-handle,
+.block-codepen .block-handle,
+.block-npm .block-handle,
+.block-bluesky .block-handle,
+.block-mastodon .block-handle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.block-github .block-icon,
+.block-gitlab .block-icon,
+.block-stackoverflow .block-icon,
+.block-devto .block-icon,
+.block-medium .block-icon,
+.block-codepen .block-icon,
+.block-npm .block-icon,
+.block-bluesky .block-icon,
+.block-mastodon .block-icon {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
+/* Hugging Face: dark text on the yellow mark */
+.block-huggingface {
+  background: linear-gradient(135deg, #ffd21e 0%, #ffb000 100%);
+  border-color: #f0a500;
+}
+.block-huggingface:hover {
+  background: linear-gradient(135deg, #ffb000 0%, #e69a00 100%);
+  border-color: #cc8800;
+}
+.block-huggingface,
+.block-huggingface .block-type {
+  color: #1a1a1a;
+}
+.block-huggingface .block-handle {
+  color: rgba(0, 0, 0, 0.75);
+}
+.block-huggingface .block-icon {
+  background: rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  color: #1a1a1a;
+}
+
+.block-x,
+.block-linkedin,
+.block-instagram,
+.block-facebook,
+.block-tiktok,
+.block-youtube,
+.block-twitch,
+.block-discord,
+.block-reddit,
+.block-pinterest,
+.block-whatsapp,
+.block-patreon,
+.block-phone,
+.block-email,
+.block-website {
+  color: white;
+}
+
+.block-x .block-type,
+.block-linkedin .block-type,
+.block-instagram .block-type,
+.block-facebook .block-type,
+.block-tiktok .block-type,
+.block-youtube .block-type,
+.block-twitch .block-type,
+.block-discord .block-type,
+.block-reddit .block-type,
+.block-pinterest .block-type,
+.block-whatsapp .block-type,
+.block-patreon .block-type,
+.block-phone .block-type,
+.block-email .block-type,
+.block-website .block-type {
+  color: white;
+}
+
+.block-x .block-handle,
+.block-linkedin .block-handle,
+.block-instagram .block-handle,
+.block-facebook .block-handle,
+.block-tiktok .block-handle,
+.block-youtube .block-handle,
+.block-twitch .block-handle,
+.block-discord .block-handle,
+.block-reddit .block-handle,
+.block-pinterest .block-handle,
+.block-whatsapp .block-handle,
+.block-patreon .block-handle,
+.block-phone .block-handle,
+.block-email .block-handle,
+.block-website .block-handle {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.block-snapchat,
+.block-snapchat .block-type,
+.block-snapchat .block-handle {
+  color: #000000;
+}
+
+.block-snapchat .block-handle {
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.block-x .block-icon,
+.block-instagram .block-icon,
+.block-facebook .block-icon,
+.block-tiktok .block-icon,
+.block-twitch .block-icon,
+.block-discord .block-icon,
+.block-reddit .block-icon,
+.block-pinterest .block-icon,
+.block-whatsapp .block-icon,
+.block-patreon .block-icon,
+.block-phone .block-icon,
+.block-email .block-icon,
+.block-snapchat .block-icon,
+.block-website .block-icon {
+  background: rgba(255, 255, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: white;
+}
+
+.block-linkedin .block-icon,
+.block-youtube .block-icon {
+  background: rgba(255, 255, 255, 1);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: black;
+}
+
+.block-qr-btn {
+  flex-shrink: 0;
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  padding: 0;
+  border: none;
+  border-radius: 8px;
+  color: inherit;
+  background: rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  opacity: 0.85;
+  transition:
+    opacity 0.15s ease,
+    background 0.15s ease;
+}
+
+.block-qr-btn:hover {
+  opacity: 1;
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.qr-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.qr-modal-card {
+  width: 100%;
+  max-width: 320px;
+  padding: 24px;
+  border-radius: 16px;
+  background: var(--surface);
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.qr-modal-title {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.qr-modal-handle {
+  color: var(--text-secondary);
+  font-size: 14px;
+  word-break: break-word;
+}
+
+.qr-modal-hint {
+  margin: 4px 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+}
+
+/* Reserves the QR footprint while its (lazily loaded) chunk arrives, so the
+   modal doesn't reflow when the code renders. */
+.qr-modal-loading {
+  width: 220px;
+  height: 220px;
+  border-radius: 8px;
+  background: var(--bg-secondary, #f2f2f2);
+}
+
+.qr-modal .btn {
+  margin-top: 8px;
+}

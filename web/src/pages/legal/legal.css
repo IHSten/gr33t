@@ -1,0 +1,56 @@
+.legal {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 64px 24px 96px;
+}
+
+.legal-back {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+.legal-back:hover {
+  color: var(--text-primary);
+}
+
+.legal h1 {
+  font-size: 40px;
+  margin: 0 0 8px;
+  letter-spacing: -0.02em;
+}
+
+.legal-updated {
+  color: var(--text-secondary);
+  font-size: 15px;
+  margin: 0 0 40px;
+}
+
+.legal-lede {
+  font-size: 18px;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+.legal h2 {
+  font-size: 22px;
+  margin: 40px 0 12px;
+}
+
+.legal p,
+.legal li {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+.legal ul {
+  padding-left: 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.legal a {
+  font-weight: 500;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}

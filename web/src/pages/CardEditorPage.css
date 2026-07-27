@@ -1,0 +1,198 @@
+.editor {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.editor-bar {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.back-link {
+  color: inherit;
+  opacity: 0.8;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.editor-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .editor-grid {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+  }
+}
+
+.panel {
+  border: 1px solid rgba(127, 127, 127, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
+
+.panel h2 {
+  margin: 0 0 16px;
+  font-size: 20px;
+}
+
+.panel-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.panel-head h2 {
+  margin: 0;
+}
+
+.editor label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.editor input,
+.editor textarea,
+.editor select {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  padding: 8px 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(127, 127, 127, 0.45);
+  background: rgba(127, 127, 127, 0.08);
+  color: inherit;
+  font: inherit;
+  box-sizing: border-box;
+}
+
+.row-end {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
+.saved-note {
+  color: #4ade80;
+  font-size: 13px;
+}
+
+.block-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.block-row {
+  display: flex;
+  gap: 12px;
+  border: 1px solid rgba(127, 127, 127, 0.25);
+  border-radius: 10px;
+  padding: 12px;
+}
+
+.block-reorder {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.block-reorder button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: 1px solid rgba(127, 127, 127, 0.45);
+  background: transparent;
+  color: inherit;
+  cursor: pointer;
+}
+
+.block-reorder button:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.block-fields {
+  flex: 1;
+}
+
+.editor-preview {
+  position: sticky;
+  top: 16px;
+}
+
+.editor-preview h2 {
+  margin: 0 0 12px;
+  font-size: 20px;
+}
+
+.preview-frame {
+  position: relative;
+  max-width: 390px;
+  border: 1px dashed rgba(127, 127, 127, 0.4);
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.preview-viewport {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: top left;
+}
+
+.preview-viewport .card-page {
+  min-height: 0;
+  max-width: none;
+  padding: 12px 12px;
+}
+
+.preview-viewport .card-header {
+  margin-bottom: 16px;
+  padding: 12px 0;
+}
+
+.preview-viewport .card-header h1 {
+  font-size: 24px;
+}
+
+.preview-viewport .card-header p {
+  font-size: 15px;
+}
+
+/* Mirror the phone-width layout regardless of the editor viewport, so blocks
+   stack instead of forcing a multi-column grid into the narrow sidebar. */
+.preview-viewport .connections-list {
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: none;
+}
+
+.block-qr-panel {
+  margin-top: 12px;
+  padding: 16px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: center;
+}
+
+/* Holds the QR footprint while its lazily loaded chunk arrives. */
+.block-qr-loading {
+  width: 160px;
+  height: 160px;
+  border-radius: 8px;
+  background: var(--bg-secondary, #f2f2f2);
+}

@@ -1,0 +1,19 @@
+# Local Terraform working files — never commit.
+.terraform/
+.terraform.tfstate.lock.info
+
+# State (should live in the remote R2 backend, not the repo).
+*.tfstate
+*.tfstate.*
+
+# Secrets / per-user values.
+terraform.tfvars
+*.auto.tfvars
+
+# Crash logs, plan artifacts.
+crash.log
+crash.*.log
+*.tfplan
+
+# The provider lock file IS committed (pins provider versions across machines):
+!.terraform.lock.hcl

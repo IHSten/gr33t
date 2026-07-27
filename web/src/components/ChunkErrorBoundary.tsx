@@ -28,9 +28,8 @@ export class ChunkErrorBoundary extends Component<Props, State> {
   }
 
   componentDidCatch(error: unknown): void {
-    let alreadyReloaded = false;
     try {
-      alreadyReloaded = sessionStorage.getItem(RELOAD_FLAG) === "1";
+      const alreadyReloaded = sessionStorage.getItem(RELOAD_FLAG) === "1";
       if (isChunkLoadError(error) && !alreadyReloaded) {
         sessionStorage.setItem(RELOAD_FLAG, "1");
         window.location.reload();

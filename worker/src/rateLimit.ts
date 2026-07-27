@@ -53,7 +53,7 @@ export function rateLimit(
     const bucket = Math.floor(nowSec / windowSeconds);
     const key = `${prefix}:${ip}:${bucket}`;
 
-    let current = 0;
+    let current: number;
     try {
       current = Number((await kv.get(key)) ?? "0") || 0;
     } catch {

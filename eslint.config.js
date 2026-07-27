@@ -1,7 +1,6 @@
 import js from "@eslint/js";
 import tseslint from "@typescript-eslint/eslint-plugin";
 import tsparser from "@typescript-eslint/parser";
-import reactPlugin from "eslint-plugin-react";
 import reactHooks from "eslint-plugin-react-hooks";
 import requireInputValidation from "./eslint-rules/require-input-validation.js";
 
@@ -32,7 +31,6 @@ export default [
     },
     plugins: {
       "@typescript-eslint": tseslint,
-      react: reactPlugin,
       "react-hooks": reactHooks,
     },
     rules: {
@@ -42,16 +40,11 @@ export default [
       ],
       "no-unused-vars": "off",
       "no-undef": "off",
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "no-debugger": "error",
       "prefer-const": "error",
       "no-var": "error",
-    },
-    settings: {
-      react: { version: "detect" },
     },
   },
   {

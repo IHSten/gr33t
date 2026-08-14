@@ -237,6 +237,16 @@
   border-color: #0f7a6b;
 }
 
+.block-signal {
+  background: linear-gradient(135deg, #3a76f0 0%, #2b62d4 100%);
+  border-color: #2453bd;
+}
+
+.block-signal:hover {
+  background: linear-gradient(135deg, #2b62d4 0%, #2453bd 100%);
+  border-color: #1e47a3;
+}
+
 .block-patreon {
   background: linear-gradient(135deg, #f96854 0%, #e6522c 100%);
   border-color: #d4441f;
@@ -442,6 +452,7 @@
 .block-reddit,
 .block-pinterest,
 .block-whatsapp,
+.block-signal,
 .block-patreon,
 .block-phone,
 .block-email,
@@ -460,6 +471,7 @@
 .block-reddit .block-type,
 .block-pinterest .block-type,
 .block-whatsapp .block-type,
+.block-signal .block-type,
 .block-patreon .block-type,
 .block-phone .block-type,
 .block-email .block-type,
@@ -478,6 +490,7 @@
 .block-reddit .block-handle,
 .block-pinterest .block-handle,
 .block-whatsapp .block-handle,
+.block-signal .block-handle,
 .block-patreon .block-handle,
 .block-phone .block-handle,
 .block-email .block-handle,
@@ -504,6 +517,7 @@
 .block-reddit .block-icon,
 .block-pinterest .block-icon,
 .block-whatsapp .block-icon,
+.block-signal .block-icon,
 .block-patreon .block-icon,
 .block-phone .block-icon,
 .block-email .block-icon,
